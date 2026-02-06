@@ -1,0 +1,84 @@
+.expense-list-container h3 {
+    margin-bottom: 1rem;
+    color: var(--text-main);
+}
+
+.expense-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.expense-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.expense-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.expense-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.expense-title {
+    font-weight: 600;
+    color: var(--text-main);
+}
+
+.expense-date {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+.tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    padding: 0.25rem 0.5rem;
+    border-radius: 1rem;
+    background-color: var(--bg-body);
+    /* Fallback */
+    color: var(--text-secondary);
+    border: 1px solid var(--border);
+    align-self: flex-start;
+    margin-top: 0.25rem;
+}
+
+.expense-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.expense-amount {
+    font-weight: 700;
+    color: var(--danger);
+    font-size: 1.1rem;
+}
+
+.btn-delete {
+    font-size: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1;
+    padding: 0 0.5rem;
+    opacity: 0.5;
+    transition: opacity 0.2s, color 0.2s;
+}
+
+.btn-delete:hover {
+    opacity: 1;
+    color: var(--danger);
+}
+
+.expense-list-empty {
+    text-align: center;
+    color: var(--text-secondary);
+    font-style: italic;
+}

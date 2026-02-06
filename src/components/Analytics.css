@@ -1,0 +1,45 @@
+.analytics-card {
+    height: fit-content;
+}
+
+.analytics-card h3 {
+    margin-bottom: 1.5rem;
+    color: var(--text-main);
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.category-header {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    margin-bottom: 0.25rem;
+}
+
+.category-bar-bg {
+    width: 100%;
+    height: 6px;
+    background-color: var(--bg-body);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 0.25rem;
+}
+
+.category-bar-fill {
+    height: 100%;
+    background-color: var(--primary);
+    border-radius: 6px;
+    transition: width 0.5s ease-out;
+}
+
+.category-amount {
+    text-align: right;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-main);
+}

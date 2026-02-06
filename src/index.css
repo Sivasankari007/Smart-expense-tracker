@@ -1,0 +1,102 @@
+/* Global Variables & Theme */
+:root {
+  /* Brand Colors */
+  --primary-hue: 250;
+  /* Deep Purple */
+  --primary: hsl(var(--primary-hue), 60%, 50%);
+  --primary-hover: hsl(var(--primary-hue), 60%, 40%);
+  --primary-light: hsl(var(--primary-hue), 60%, 95%);
+
+  --accent-hue: 160;
+  /* Teal for income/positive */
+  --accent: hsl(var(--accent-hue), 70%, 45%);
+  --danger-hue: 340;
+  /* Red for expense */
+  --danger: hsl(var(--danger-hue), 80%, 55%);
+
+  /* Neutrals */
+  --bg-body: #f8f9fc;
+  --bg-card: #ffffff;
+  --text-main: #1a1c23;
+  --text-secondary: #64748b;
+  --border: #e2e8f0;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+
+  /* Radius */
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+
+  /* Font */
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Dark Theme Support */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-body: #0f172a;
+    --bg-card: #1e293b;
+    --text-main: #f1f5f9;
+    --text-secondary: #94a3b8;
+    --border: #334155;
+
+    --primary-light: hsl(var(--primary-hue), 60%, 15%);
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-body);
+  color: var(--text-main);
+  line-height: 1.5;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: inherit;
+}
+
+input,
+select,
+textarea {
+  font-family: inherit;
+  border: 1px solid var(--border);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border-radius: var(--radius-md);
+  padding: 0.5rem 0.75rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px var(--primary-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 700;
+  line-height: 1.2;
+}
